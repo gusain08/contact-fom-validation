@@ -1,0 +1,202 @@
+:root{
+    --body-bg-color:hsl(0, 0%, 100%);
+    --grey-medium:hsl(186, 15%, 59%);
+    --grey-darker:hsl(187, 24%, 22%);
+    /*green color*/
+    --green-light:hsl(148, 38%, 91%);
+    --green-medium:hsl(169, 82%, 27%);
+    --red:hsl(0, 66%, 54%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    background-color: var(--green-light);
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: "Karla", sans-serif;
+    height: 100vh;
+}
+
+p{
+    font-family: "Karla", sans-serif;
+    line-height: 1.5;
+}
+ol li,
+ul li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.5;
+}
+
+h1{
+    font-size: 48px;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+h2{
+    font-size: 40px;    
+}
+
+h3{
+    font-size: 36px;
+}
+
+h4{
+    font-size: 30px;
+    color: var(--scondary-bg-color);
+}
+
+h5{
+    font-size: 25px;
+}
+ 
+ 
+h6{
+    font-size: 18px;
+}
+
+.contact-form{
+    max-width: 800px;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+}
+#contactform {
+    background-color: var( --body-bg-color);
+    padding: 30px;
+    border-radius: 12px;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+}
+#contactform .title{
+    padding-left: 12px;
+}
+#contactform label{
+    margin-bottom: 10px;
+    color: var(--green-medium);
+}
+#contactform label sup{
+    font-size: 16px;
+}
+.form-group .form-control{
+    border: 1px solid var(--green-medium);
+    border-radius: 10px;
+    padding: 8px 10px;
+    outline: none;
+}
+.form-group .form-control:focus{
+    box-shadow: none;
+}
+#contactform label sup {
+    font-size: 20px;
+    top: 0;
+    color: var(--red);
+}
+.enqrywrapper {
+    padding: 10px 20px;
+    border: 1px solid var(--green-medium);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+}
+
+.enqrywrapper input[type='radio']{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color:var(--green-medium)
+}
+
+.form-group input[type='checkbox']{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    accent-color:var(--green-medium);
+    position: relative;
+    top: 5px;
+}
+.form-group.enqrywrapper.active {
+    background: var(--green-light);
+}
+#contactform .form-group.enqrywrapper.active label{
+    color: var(--grey-darker);
+}
+
+#message {
+    outline: none;
+    border: 1px solid var(--green-medium);
+    border-radius: 10px;
+    color: var(--grey-darker);
+    line-height: 1.5;
+}
+
+.submit_btn{
+    background-color: var(--green-medium);
+    color: white;
+    font-size: 16px;
+}
+.submit_btn:hover{
+    color: var(--green-light);
+}
+.error{
+    color: var(--red);
+    display: none;
+}
+
+.succesStage {
+    display: flex;
+    background: var(--green-medium);
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: #fff;
+    z-index: 999;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+}
+.succesStage.active{
+    transform: translateY(0%);
+    opacity: 1;
+    visibility: visible;
+}
+.succesStage p{
+    font-size: 14px;
+}
+.btn-check:focus+.btn, .btn:focus{
+    box-shadow: none;
+}
+@media only screen and (max-width:767px) {
+    #contactform{
+        padding:15px 8px;
+        position: static;
+        margin: 15px 0;
+        transform: none;
+    }
+    .contact-form{
+        margin: 0 20px;
+    }
+
+}
